@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+
+	
+	<script type="text/javascript">
+		$(function(){
+			//$('#tabs').tabs();
+		});
+	</script>
+	
+</head>
+<body>
+	<div id="tabs" class="navbar">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+				<a href="navbar-brand" href="#">CoffeMate</a>
+			</div>
+			
+			
+			
+		 <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+			<a class="navbar-brand" href="">Team Kansel</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav" id="movieLinks">
+            <li><a href="#searchForm">Movie Searcher</a></li>
+			<li ><a href="#upcoming" id="upcomingbutton">Upcoming</a></li>
+            <li ><a href="#theaters" id="intheatersbutton">In Theaters</a></li>
+			<li ><a href="#opening" id="openingbutton">Opening</a></li>
+           </ul>
+		  <form id="searchForm" method="post" class="pull-right">
+			<input  type="text" id="s" placeholder="Enter Movie Title" class="input-sm"/>
+			<input type="submit" id="submitButton"value="Search Movie" data-complete-text="finished!" class="submit btn btn-success">
+			
+		</form>
+		
+        </div>
+
+      </div>
+    </div>
+			
+			
+			
+		</div>
+		
+		
+		<div id="box" class="container">
+			<ul class="list-inline list-unstyled"></ul>
+		</div>
+		<div id="theaters" class="container">
+			<ul class="list-inline list-unstyled"></ul>
+		</div>
+		<div id="upcoming" class="container">
+			<ul class="list-inline list-unstyled"></ul>
+		</div>
+		<div id="opening" class="container">
+			<ul class="list-inline list-unstyled"></ul>
+		</div>
+	</div>
+		<script type="text/x-handlebars-template" id="search-item">
+			<center>
+			<br />
+			<br />
+			<li><img src="{{posters.profile}}" class='img-thumbnail ' alt="" />
+			<h5>{{title}} ({{year}})</h5></br>
+			<h7>{{synopsis}}</h7></br>
+			</li>
+			</center>
+		</script>
+		  <div class="container">
+
+     
+        
+
+		<center><div id="resulta"></div></center><br />
+	
+	
+          <div class="row">
+			<div id="rs" class="" style="display:inline;"></div>
+            <script id="hit-template" type="text/x-handlebars-template">
+
+				
+				<center>
+			<br />
+			<br />
+			
+			<img src="{{poster}}" class='img-thumbnail ' alt="" />
+			<h5>{{title}} ({{year}})</h5></br>
+			<h7>{{synopsis}}</h7></br>
+				
+			</center>	
+					
+		
+					
+					
+				
+			</script>
+		
+			
+			
+          </div>
+        </div>
+
+
+
+
+	
+		<script type="text/javascript" src="js/kansel.js"></script>
+		<script type="text/javascript" src="js/handlebars.js"></script>
+	
+
+</body>
+</html>
